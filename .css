@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #aaa;
+}
+
+.container{
+    width: 600px;
+    height: auto;
+    margin: 150px  auto;
+}
+.principal{
+    width: 600px;
+    height: 300px;
+    box-shadow: 10px 10px 5px 0px rgb(75, 72, 72);
+    overflow: hidden;
+}
+.slide{
+    display: flex;
+    width: 500%;
+    transition: all 0.6s;
+}
+.slide img{
+    width: 600px;
+    height: 300px;
+}
+label img{
+    width: 120px;
+    cursor: pointer;
+    float: left;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+input{
+    display: none;
+}
+#foto2:checked ~ .principal .slide{
+    margin-left: -100%;
+}
+#foto3:checked ~ .principal .slide{
+    margin-left: -200%;
+}
+#foto4:checked ~ .principal .slide{
+    margin-left: -300%;
+}
+#foto5:checked ~ .principal .slide{
+    margin-left: -400%;
+}
+input[name="grupo"]:checked + label img{
+    opacity: .9;
+}
